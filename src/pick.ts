@@ -22,3 +22,23 @@ function updateUser2(updateProps : UpdatePropsOptional){
 }
 
 updateUser2( {name: "bipin"} )
+
+
+const a = [1,2,3]
+a[0]= 4  // why this is possible but for string it is not possible
+//  because we are changing the internal value of a not the reference of a 
+// a=[3,4,2] // this will be not allowed
+
+// const username = "Bipin"
+// username="kumar"
+
+type Person={
+  readonly  name : string,
+   readonly age : number,
+}
+
+const user : Person ={
+    name : "Bipin",
+    age : 23
+}
+//  user.name="Kumar" // it is allowed but if we made name and age as readonly then it will not be allowed
