@@ -42,3 +42,30 @@ const user : Person ={
     age : 23
 }
 //  user.name="Kumar" // it is allowed but if we made name and age as readonly then it will not be allowed
+
+// method 1 
+// interface Config {
+//     apikey  : string,
+//     endpoints : string,
+// }
+
+// const config :Readonly <Config> = {
+//     endpoints :"https://api.examples.com",
+//     apikey : "abcd1234"
+// }
+
+// config.apikey = '323kjl'
+
+// method 2
+
+interface Config {
+    readonly apikey  : string,
+    readonly endpoints : string,
+}
+
+const config :Config = {
+    endpoints :"https://api.examples.com",
+    apikey : "abcd1234"
+}
+
+// config.apikey = '323kjl' // this will be not allowed 
