@@ -142,8 +142,15 @@
 // }
 /*---------------------------------------Generic ---------------------------- */
 // create a function which take array as input and return first ele array can be string or number 
-function fn(arr) {
-    return arr[0];
+// type Type = number[]  | string[]
+// function fn( arr : Type){
+//     return arr[0]
+// }
+// console.log(fn([2,3,4]))  // return type is string[] | number[] but ideally it should be number[]
+// console.log(fn(["hi","hlw","bye"]))
+// const val = fn(["hi","hlw"]).toUpperCase() // it fails to figurout it
+function identity(arg) {
+    return arg;
 }
-console.log(fn([2, 3, 4]));
-console.log(fn(["hi", "hlw", "bye"]));
+let op1 = identity("myString").toUpperCase(); // it allow now to use toUpperCase
+let op2 = identity(2);
