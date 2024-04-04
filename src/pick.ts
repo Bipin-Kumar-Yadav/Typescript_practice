@@ -119,3 +119,16 @@ const user =users.get('1');
 console.log(user)
 users.delete('2')
 console.log(users)
+
+
+// we can assign type to map as new Map<string,User>()
+
+/* ------------ Exclude -------------- */
+type EventExclued = 'click' | 'scroll' | 'mousemove';
+type newEventExclued = Exclude<EventExclued,'scroll'>
+
+const hanleEvent =(event : newEventExclued)=>{
+
+}
+hanleEvent('click')
+// hanleEvent('scroll') // gives scroll is not assignable error
